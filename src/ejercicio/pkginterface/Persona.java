@@ -1,6 +1,6 @@
 package ejercicio.pkginterface;
 
-public class Persona {
+public class Persona implements Cantante{
 
     private String nombre;
     private String apellido;
@@ -36,4 +36,25 @@ public class Persona {
         this.telefono = telefono;
     }
 
+    @Override
+    public void cantar() {
+    
+        System.out.println("cantar pio pio");
+        
+    }
+
+    @Override
+    public void gritar() {
+        System.out.println("grito po que no se cantar");
+    }
+
+    @Override
+    public String toString() {
+        
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + '}';
+    }
+
+    
+    
+    
 }
